@@ -63,9 +63,7 @@ header {
     height: 35px;
     border-left: none;
     border-radius: 0 15px 15px 0;
-    background-image: url("../img/search/sea-search.svg");
-    background-position: 10px 3px;
-    background-repeat: no-repeat;
+    background: lightblue url("../img/search/sea-search.svg") no-repeat 10px 3px;
 }
 
 .links {
