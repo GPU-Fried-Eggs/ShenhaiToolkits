@@ -1,0 +1,38 @@
+label {
+    cursor: pointer;
+}
+/* input#file { */
+/* display: none; */
+/* } */
+img#output {
+    display: none;
+}
+
+canvas {
+    max-width: 45vw;
+    max-height: 45vh;
+    padding: 20px;
+    min-width: 100px;
+}
+
+input#pad {
+    width: 40px;
+}
+
+input#tile {
+    width: 40px;
+}
+
+div.controls {
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+    margin: 10px;
+}
+
+a {
+    margin: 10px;
+    cursor: pointer;
+}

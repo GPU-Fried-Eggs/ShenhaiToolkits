@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <title>Home</title>
+</head>
+<body>
+
+<div id="background"></div>
+
+<div id="nav-background"></div>
+<nav>
+    <img id="nav-logo" src="../img/shared/nav-logo.svg" alt="SHENHAI">
+    <ul class="nav-ul">
+        <li><img src="../img/shared/nav-search.svg" alt=""><a href="search.html" inf-text="languageData.nav.search"></a><div class="nav-underline"></div></li>
+        <li><img src="../img/shared/nav-home.svg" alt=""><a href="" inf-text="languageData.nav.home"></a><div class="nav-underline"></div></li>
+        <li><img src="../img/shared/nav-label.svg" alt=""><a href="#" inf-text="languageData.nav.label"></a><div class="nav-underline"></div></li>
+        <li><img src="../img/shared/nav-music.svg" alt=""><a href="#" inf-text="languageData.nav.music"></a><div class="nav-underline"></div></li>
+        <li><img src="../img/shared/nav-tool.svg" alt=""><a href="tools.html" inf-text="languageData.nav.tool"></a><div class="nav-underline"></div></li>
+        <li><img src="../img/shared/nav-image.svg" alt=""><a href="image.html" inf-text="languageData.nav.image"></a><div class="nav-underline"></div></li>
+        <li><img src="../img/shared/nav-global.svg" alt=""><a href="home.html" inf-text="languageData.nav.language" onclick="switchLanguage()"></a><div class="nav-underline"></div></li>
+        <li><img src="../img/shared/nav-about.svg" alt=""><a href="about.html" inf-text="languageData.nav.about"></a><div class="nav-underline"></div></li>
+    </ul>
+    <img id="nav-menu" src="../img/shared/nav-menu.svg" alt="">
+</nav>
+
+<header>
+    <div id="header-content">
+        <h1>深海の舞を見せましょう</h1>
+        <p class="scroll-text">この程度の不幸なんて、まだ始まりに過ぎないのよ。</p>
+    </div>
+</header>
+
+<section>
+
+    <div class="section-left">
+        <div class="profile card">
+            <div id="profile-photo">
+                <img src="https://avatars.githubusercontent.com/u/88884784?v=4" alt="" width="130px" height="130px">
+            </div>
+            <div id="profile-name"><h2>深海里有坏龙龙</h2></div>
+            <div id="profile-statics">
+                <div><p inf-text="languageData.page.posts"></p><p id="profile-statics-posts">6</p></div>
+                <div><p inf-text="languageData.page.label"></p><p id="profile-statics-label">3</p></div>
+                <div><p inf-text="languageData.page.topic"></p><p id="profile-statics-topic">2</p></div>
+            </div>
+            <button id="profile-about" onclick="window.open('https://github.com/GPU-Fried-Eggs/ShenhaiToolkits')">
+                <img id="label-img" src="../img/home/pro-github-flip.svg" alt="">
+                <p>Follow Me Github</p>
+            </button>
+            <div class="profile-link">
+                <img src="../img/home/pro-github.svg" alt="" onclick="window.open('https://github.com/GPU-Fried-Eggs')">
+                <img src="../img/home/pro-mail.svg" alt="" onclick="window.open('mailto:c0xipe00@students.oamk.fi')">
+                <img src="../img/home/pro-discord.svg" alt="">
+                <img src="../img/home/pro-whatsapp.svg" alt="">
+            </div>
+        </div>
+        <div class="broadcast card">
+            <img src="../img/home/bro-announcement.svg" alt="">
+            <p inf-text="languageData.page.broadcast"></p>
+        </div>
+        <div class="news card">
+            <h1 inf-text="languageData.page.news"></h1>
+            <a class="news-column" href="#">
+                <img src="../img/home/res/01.min.jpg" alt="">
+                <div class="news-column-text"><p>[Pinned Topic]</p><p>2021-12-23</p></div>
+            </a>
+            <a class="news-column" href="#">
+                <img src="../img/home/res/02.min.jpg" alt="">
+                <div class="news-column-text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>2022-01-04</p></div>
+            </a>
+            <a class="news-column" href="#">
+                <img src="../img/home/res/03.min.jpg" alt="">
+                <div class="news-column-text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>2022-01-01</p></div>
+            </a>
+            <a class="news-column" href="#">
+                <img src="../img/home/res/04.min.jpg" alt="">
+                <div class="news-column-text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>2021-12-31</p></div>
+            </a>
+            <a class="news-column" href="#">
+                <img src="../img/home/res/05.min.jpg" alt="">
+                <div class="news-column-text"><p>Tips in html & make css file clean.</p><p>2021-12-26</p></div>
+            </a>
+        </div>
+        <div class="topic card">
+            <div class="topic-title">
+                <img src="../img/home/cla-menu.svg" alt="">
+                <p inf-text="languageData.page.topic"></p>
+            </div>
+            <div class="topic-content">
+                <div><p>CSS</p><p>1</p></div>
+                <div><p>WebGL</p><p>0</p></div>
+                <div><p>Git</p><p>0</p></div>
+                <div><p>HEXO</p><p>0</p></div>
+                <div><p>HTTP</p><p>0</p></div>
+                <div><p>JAVA</p><p>0</p></div>
+                <div><p>JavaScript</p><p>1</p></div>
+                <div><p>Ajax</p><p>0</p></div>
+            </div>
+        </div>
+        <div class="label card">
+            <div class="label-title">
+                <img src="../img/home/lab-menu.svg" alt="">
+                <p inf-text="languageData.page.label"></p>
+            </div>
+            <div class="label-content"></div>
+            <div class="label-line"></div>
+        </div>
+    </div>
+    <div class="section-right">
+        <div class="column column-stage right-scroll">
+            <div class="column-imgMark">
+                <a class="column-img img1" href="#"></a>
+            </div>
+            <div class="column-text">
+                <a href="#"><h1>[Pinned Topic]</h1></a>
+                <div class="date">
+                    <img src="../img/home/col-date.svg" alt="" style="width: 19px;height: 19px;margin-right: 5px;">
+                    <p inf-text="languageData.column.release"></p>
+                    <p>2021-12-23</p>
+                    <div class="line"></div>
+                    <p>info</p>
+                </div>
+                <div class="Lorem">New Tools release</div>
+            </div>
+        </div>
+        <div class="column column-stage right-scroll">
+            <div class="column-text">
+                <a href="#"><h1>Create webgl animation</h1></a>
+                <div class="date">
+                    <img src="../img/home/col-date.svg" alt="" style="width: 19px;height: 19px;margin-right: 5px;">
+                    <p inf-text="languageData.column.release"></p>
+                    <p>2021-12-23</p>
+                    <div class="line"></div>
+                    <p>info</p>
+                </div>
+                <div class="Lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            </div>
+            <div class="column-imgMark">
+                <a class="column-img img2" href="#"></a>
+            </div>
+        </div>
+        <div class="column column-stage right-scroll">
+            <div class="column-imgMark">
+                <a class="column-img img3" href="#"></a>
+            </div>
+            <div class="column-text">
+                <a href="#"><h1>A topic</h1></a>
+                <div class="date">
+                    <img src="../img/home/col-date.svg" alt="" style="width: 19px;height: 19px;margin-right: 5px;">
+                    <p inf-text="languageData.column.release"></p>
+                    <p>2021-12-23</p>
+                    <div class="line"></div>
+                    <p>info</p>
+                </div>
+                <div class="Lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            </div>
+        </div>
+        <div class="column column-stage right-scroll">
+            <div class="column-text">
+                <a href="#"><h1>A topic</h1></a>
+                <div class="date">
+                    <img src="../img/home/col-date.svg" alt="" style="width: 19px;height: 19px;margin-right: 5px;">
+                    <p inf-text="languageData.column.release"></p>
+                    <p>2021-12-23</p>
+                    <div class="line"></div>
+                    <p>info</p>
+                    <div class="line"></div>
+                    <p>js</p>
+                </div>
+                <div class="Lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            </div>
+            <div class="column-imgMark">
+                <a class="column-img img4" href="#"></a>
+            </div>
+        </div>
+        <div class="column column-stage right-scroll">
+            <div class="column-imgMark">
+                <a class="column-img img5" href="#"></a>
+            </div>
+            <div class="column-text">
+                <a href="#"><h1>A topic</h1></a>
+                <div class="date">
+                    <img src="../img/home/col-date.svg" alt="" style="width: 19px;height: 19px;margin-right: 5px;">
+                    <p inf-text="languageData.column.release"></p>
+                    <p>2021-12-23</p>
+                    <div class="line"></div>
+                    <p>info</p>
+                </div>
+                <div class="Lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            </div>
+        </div>
+        <div class="column column-stage right-scroll">
+            <div class="column-text">
+                <a href="#"><h1>Tips in html and handling css</h1></a>
+                <div class="date">
+                    <img src="../img/home/col-date.svg" alt="" style="width: 19px;height: 19px;margin-right: 5px;">
+                    <p inf-text="languageData.column.release"></p>
+                    <p>2021-12-23</p>
+                    <div class="line"></div>
+                    <p>info</p>
+                </div>
+                <div class="Lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            </div>
+            <div class="column-imgMark">
+                <a class="column-img img6" href="#"></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-text">
+        <p>&copy;2021-2022 By 深海里有坏龙龙</p>
+        <p inf-text="languageData.footer.text">深海酱的任务罢了.</p>
+    </div>
+</footer>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/scrollreveal/dist/scrollreveal.min.js"></script>
+<script src="../js/shared.js"></script>
+<script src="../js/home.js"></script>
+<script>
+    let languageRenderCtx = new LanguageRender({
+        el: [".nav-ul li", ".footer-text", "#profile-statics div", ".broadcast",".news", ".topic-title", ".label-title", ".date"],
+        lan: language === "zh" ? 1 : 0,
+        data: {
+            languageData: {
+                nav: {
+                    search: ["I/S+", "搜索"],
+                    home: ["Home", "首页"],
+                    music: ["Sng", "音乐"],
+                    label: ["Post", "标签"],
+                    tool: ["Util", "工具"],
+                    image: ["Img", "图片"],
+                    language: ["Lang", "语言"],
+                    about: ["About", "关于"]
+                },
+                footer: {
+                    text: ["私についてきて。永遠の故郷に還りましょう.", "只不过是深海酱的任务罢了."]
+                },
+                page: {
+                    news: ["Latest News", "最新文章"],
+                    broadcast: ["Versemonger of the darkest alleys — that's me!", "天清海阔，皓月凌空，此情此景，正适合作诗一首。"],
+                    posts: ["Posts", "文章"],
+                    topic: ["Topics", "分类"],
+                    label: ["Ideas", "标签"],
+                },
+                column: {
+                    release: ["release：", "发布于："]
+                }
+            },
+        }
+    });
+</script>
+</html>

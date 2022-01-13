@@ -1,0 +1,126 @@
+html {
+    overflow-y: scroll;
+}
+
+#background {
+    background-color: pink;
+    /*background-image: url(../img/1190230.png);*/
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: bottom;
+    position: fixed;
+    z-index: -10;
+}
+
+#container {
+    margin-top: 60px;
+}
+
+/* || basic set up*/
+#waterfall {
+    margin: 10px;
+    overflow: hidden;
+}
+
+#waterfall li {
+    left: 0;
+    top: 0;
+    position: absolute;
+    opacity: 0;
+}
+
+#waterfall li.show {
+    opacity: 1;
+}
+
+#waterfall li div {
+    margin: 10px;
+}
+
+/* || effect and style */
+#waterfall li {
+    cursor: pointer;
+    z-index: 0;
+    transform: translateY(100px);
+}
+
+#waterfall li:hover {
+    z-index: 1;
+}
+
+#waterfall li.show {
+    transform: translateY(0);
+    transition: all 0.3s, top 1s;
+}
+
+#waterfall li div {
+    font-size: 2em;
+    border-radius: 5px;
+    background: white;
+    padding: 15px;
+    transform: translateY(0);
+    transition: all 0.5s;
+}
+
+#waterfall li div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 3px 5px rgba(118, 117, 117, 0.3);
+    transition: all 0.3s;
+}
+/*小于一列的效果*/
+
+#waterfall.min {
+    margin: 0
+}
+
+#waterfall.min li div {
+    margin: 0;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#waterfall.min li div:hover {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+#waterfall li div img {
+    width: 100%;
+}
+
+/* viewer */
+#lightbox-mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: none;
+    opacity: .5;
+    z-index: 90;
+}
+
+#lightbox-popup {
+    position: fixed;
+    left: 50%;
+    top: 50px;
+    margin-left: -250px;
+    width: 500px;
+    display: none;
+    z-index: 100;
+}
+
+#lightbox-popup .lightbox-pic-view {
+    position: relative;
+    border: 5px solid white;
+    border-radius: 12px;
+    background: white url("../img/shared/pav-loading.gif") no-repeat center center;
+    overflow: hidden;
+}
+
+#lightbox-popup .lightbox-pic-view img {
+    display:block
+}

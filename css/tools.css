@@ -1,0 +1,109 @@
+html {
+    overflow-y: scroll;
+}
+
+#background {
+    background-color: pink;
+    /*background-image: url(../img/1190230.png);*/
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: bottom;
+    position: fixed;
+    z-index: -10;
+}
+
+.content {
+    text-align: center;
+    padding-top: 8vh;
+}
+
+.content .tagcloud {
+    display: inline-block;
+    z-index: 0;
+}
+
+#container {
+    padding-top: 10vh;
+    margin: 0 10vw;
+}
+
+.item-list {
+    display: grid;
+    gap: 13px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-content: space-evenly;
+}
+
+.item {
+    position: static;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    border: 1px solid transparent;
+    box-shadow: none;
+    cursor: pointer;
+    transition: border 0.3s ease-in-out;
+}
+
+.item:hover {
+    box-shadow: #3a3a3a;
+    border: 1px solid #8d4242;
+}
+
+.item-inner {
+    padding: 10px;
+    position: relative;
+}
+
+.item a {
+    display: inline-block;
+}
+
+.item-icon {
+    width: 150px;
+    height: 150px;
+    vertical-align: middle;
+    margin-right: 15px;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+.item-info {
+    width: calc(100% - (150px /* .item icon*/ + 15px /* right */ + 10px));
+    height: 150px;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item-head {
+    margin-top: 10%;
+}
+
+.item-do {
+    margin-top: 8px;
+    text-align: right;
+}
+
+.item-link {
+    float: left;
+    margin-top: 3px;
+    color: #8b8b8b;
+    max-width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.item-btn {
+    padding: 3px 12px;
+    position: relative;
+}
+
+.live2d {
+    height: 25vh;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}

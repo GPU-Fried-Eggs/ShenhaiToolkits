@@ -1,0 +1,143 @@
+html {
+    overflow-y: scroll;
+}
+
+#background {
+    background-image: url(../img/bg.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: bottom;
+    position: fixed;
+    z-index: -10;
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#container {
+    width: 80%;
+    height: 100%;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#time {
+    margin-top: 20vh;
+    font-size: 5.5rem;
+    color: whitesmoke;
+    margin-bottom: 2.5rem;
+}
+
+#search {
+    width: 100vw;
+    min-width: 252px;
+    display: flex;
+    font-size: 0;
+    justify-content: center;
+}
+
+#search-target {
+    height: 35px;
+    text-align: center;
+    border-right: none;
+    border-radius: 15px 0 0 15px;
+}
+
+#search-text {
+    width: 400px;
+    height: 35px;
+    padding: 0 10px;
+}
+
+#search-button {
+    width: 50px;
+    height: 35px;
+    border-left: none;
+    border-radius: 0 15px 15px 0;
+    background-image: url("../img/search/sea-search.svg");
+    background-position: 10px 3px;
+    background-repeat: no-repeat;
+}
+
+.links {
+    width: 60vw;
+    max-width: 650px;
+    min-width: 300px;
+    padding: 5px 20px 5px;
+    margin-top: 25px;
+    border-radius: 8px;
+    background: #40404025;
+    transition: backdrop-filter 0.2s;
+}
+
+.links:hover {
+    backdrop-filter: saturate(120%) blur(4px);
+}
+
+.links tr td {
+    color: #ffffff;
+    text-align: center;
+    line-height: 5vh;
+}
+
+.links tr td a {
+    color: white;
+}
+
+.links tr:nth-child(even) > td {
+    border-bottom: 1px solid white;
+}
+
+.links tr:last-child > td {
+    border-bottom: none;
+}
+
+.links tr:nth-child(odd) > td:first-child {
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.links tr:nth-last-child(2) > td:first-child {
+    border-bottom: none;
+}
+
+@media screen and (max-width: 1080px) {
+    #time {
+        margin-top: 21vh;
+        margin-bottom: 2.25rem;
+    }
+
+    #search-text {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #search-text {
+        width: 182px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    #time {
+        margin-top: 13vh;
+    }
+
+    #search-target {
+        width: 35px;
+    }
+
+    #search-button {
+        width: 35px;
+        background-position: 3px 3px;
+    }
+}

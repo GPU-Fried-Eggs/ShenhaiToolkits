@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../css/search.css">
+    <title>Search</title>
+</head>
+<body>
+
+<div id="background"></div>
+
+<div id="nav-background"></div>
+<nav>
+    <img id="nav-logo" src="../img/shared/nav-logo.svg" alt="SHENHAI">
+    <ul class="nav-ul">
+        <li><img src="../img/shared/nav-search.svg" alt=""><a href="" inf-text="languageData.nav.search"></a><div class="nav-underline"></div></li>
+        <li><img src="../img/shared/nav-home.svg" alt=""><a href="home.html" inf-text="languageData.nav.home"></a><div class="nav-underline"></div></li>
+        <li><img src="../img/shared/nav-label.svg" alt=""><a href="#" inf-text="languageData.nav.label"></a><div class="nav-underline"></div></li>
+        <li><img src="../img/shared/nav-music.svg" alt=""><a href="#" inf-text="languageData.nav.music"></a><div class="nav-underline"></div></li>
+        <li><img src="../img/shared/nav-tool.svg" alt=""><a href="tools.html" inf-text="languageData.nav.tool"></a><div class="nav-underline"></div></li>
+        <li><img src="../img/shared/nav-image.svg" alt=""><a href="image.html" inf-text="languageData.nav.image"></a><div class="nav-underline"></div></li>
+        <li><img src="../img/shared/nav-global.svg" alt=""><a href="search.html" inf-text="languageData.nav.language" onclick="switchLanguage()"></a><div class="nav-underline"></div></li>
+        <li><img src="../img/shared/nav-about.svg" alt=""><a href="about.html" inf-text="languageData.nav.about"></a><div class="nav-underline"></div></li>
+    </ul>
+    <img id="nav-menu" src="../img/shared/nav-menu.svg" alt="">
+</nav>
+
+<header>
+    <div id="container">
+        <div id="time">
+            <span class="hours">--</span><span>:</span><span class="minutes">--</span>
+        </div>
+        <div id="search">
+            <form onsubmit="return search(this)">
+                <select id="search-target" name="target">
+                    <option value="Google" selected="selected">Google</option>
+                    <option value="Github">Github</option>
+                    <option value="Youtube">Youtube</option>
+                    <option value="Pixiv">Pixiv</option>
+                </select>
+                <input id="search-text" type="text" name="key" placeholder="I want ...">
+                <input id="search-button" type="submit" value=" ">
+            </form>
+        </div>
+        <table class="links">
+            <tr>
+                <td rowspan="2">Like</td>
+                <td><a href="https://www.bilibili.com/">bilibili</a></td>
+                <td><a href="https://www.pixiv.net/">pixiv</a></td>
+                <td><a href="https://www.shadertoy.com/">sdtoy</a></td>
+            </tr>
+            <tr>
+                <td>empty</td>
+                <td>empty</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td rowspan="2">Work</td>
+                <td><a href="https://github.com/">github</a></td>
+                <td>empty</td>
+                <td>empty</td>
+            </tr>
+            <tr>
+                <td>empty</td>
+                <td>empty</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td rowspan="2">APIs</td>
+                <td><a href="https://docs.microsoft.com/en-us/dotnet/">.net</a></td>
+                <td><a href="https://docs.microsoft.com/en-us/azure/machine-learning/">ai</a></td>
+                <td><a href="https://www.w3schools.com/js/js_api_intro.asp">html</a></td>
+            </tr>
+            <tr>
+                <td><a href="https://www.khronos.org/files/webgl20-reference-guide.pdf">wgl</a></td>
+                <td><a href="https://docs.microsoft.com/en-us/cpp/">cpp</a></td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+</body>
+<script src="../js/shared.js"></script>
+<script src="../js/search.js"></script>
+<script>
+    let languageRenderCtx = new LanguageRender({
+        el: [".nav-ul li"],
+        lan: language === "zh" ? 1 : 0,
+        data: {
+            languageData: {
+                nav: {
+                    search: ["I/S+", "搜索"],
+                    home: ["Home", "首页"],
+                    music: ["Sng", "音乐"],
+                    label: ["Post", "标签"],
+                    tool: ["Util", "工具"],
+                    image: ["Img", "图片"],
+                    language: ["Lang", "语言"],
+                    about: ["About", "关于"]
+                },
+            },
+        }
+    });
+</script>
+</html>
