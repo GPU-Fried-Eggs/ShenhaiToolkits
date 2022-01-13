@@ -272,7 +272,7 @@ class TagCloud {
 //初始化pixi
 let app = new PIXI.Application({ view: l2d, transparent: true, autoStart: true });
 //初始化live2d
-let model = PIXI.live2d.Live2DModel.fromSync("/model/Diana.model3.json");
+let model = PIXI.live2d.Live2DModel.fromSync("../model/Diana.model3.json");
 
 model.once("load", () => {
     const motionManager = model.internalModel.motionManager;

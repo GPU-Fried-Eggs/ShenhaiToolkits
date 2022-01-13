@@ -197,7 +197,7 @@ window.onload = function () {
                 const li = document.createElement("li");
                 const div = document.createElement("div");
                 const img = document.createElement("img");
-                img.src = "/img/gallery/" + i % 50 + ".jpg";
+                img.src = "../img/gallery/" + i % 50 + ".jpg";
                 img.setAttribute("data-rote", "lightbox");
                 img.setAttribute("data-src", img.src);
                 div.appendChild(img);

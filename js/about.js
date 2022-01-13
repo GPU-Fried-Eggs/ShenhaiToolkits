@@ -20,7 +20,7 @@ window.onload = function() {
             }
         },
         onInit: (ctx) => {
-            loadImage("img/about/noise.png").then(image => {
+            loadImage("../img/about/noise.png").then(image => {
                 const gl = ctx.gl;
                 const texture = gl.createTexture();
                 gl.bindTexture(gl.TEXTURE_2D, texture);
