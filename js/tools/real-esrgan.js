@@ -18,7 +18,7 @@ let processing = false;
 // 走出的想法，考虑浮动通过限制绘制
 async function loadModel() {
     if(!model)
-        model = await ort.InferenceSession.create("/js/tools/res/RealESRGAN_x4plus_int8.onnx");
+        model = await ort.InferenceSession.create("../../js/tools/res/RealESRGAN_x4plus_int8.onnx");
     return model;
 }
 
