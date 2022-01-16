@@ -8,6 +8,15 @@ const loadImage = (src) => new Promise((resolve, reject) => {
 
 let img = loadImage("../img/about/noise.png");
 
+ScrollReveal().reveal("header", {
+    distance: '100px',
+    duration: 1000,
+    easing: 'ease-out',
+    interval: 100,
+    opacity: 0,
+    origin: 'top',
+});
+
 window.onload = function() {
     shade({
         canvas : background,

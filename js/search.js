@@ -1,6 +1,15 @@
 const hour = document.querySelector(".hours");
 const minutes = document.querySelector(".minutes");
 
+ScrollReveal().reveal("header", {
+    distance: '100px',
+    duration: 1000,
+    easing: 'ease-out',
+    interval: 100,
+    opacity: 0,
+    origin: 'top',
+});
+
 function clock() {
     let date = new Date();
     let h = date.getHours();

@@ -2,10 +2,129 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0;url='page/home.html'">
+    <meta http-equiv="refresh" content="1.5;url='page/home.html'">
+    <style>
+        header {
+            font-family: Consolas, monaco, monospace;
+            position:absolute;
+            top:0; left:0; right:0; bottom:0;
+            background-color: white;
+
+            color: orange;
+        }
+
+        header .loader-center {
+            width:300px;
+            height:100px;
+            line-height:100px;
+
+            text-align:center;
+            font-size:38px;
+            letter-spacing:-6px;
+
+            position:absolute;
+            top:50%; left:50%;
+            margin: -50px auto 0 -150px;
+
+        }
+
+        header .loader-center .chars .dots .char {
+            font-size:150%;
+            display:inline-block;
+        }
+
+        /* animation starts here */
+        .dots .dot {
+            position:relative;
+            top:0; left:0;
+        }
+
+        .dot._dot-1 {
+            animation:dot_1 1s ease-in-out infinite;
+            animation-fill-mode: backwards;
+            animation-direction: alternate;
+        }
+
+        .dot._dot-2 {
+            animation:dot_2 1s ease-in-out infinite;
+            animation-fill-mode: backwards;
+            animation-direction: alternate;
+            animation-delay:1s;
+        }
+
+        .dot._dot-3 {
+            animation:dot_3 1s ease-in-out infinite;
+            animation-fill-mode: backwards;
+            animation-direction: alternate;
+            animation-delay:0.5s;
+        }
+
+        @keyframes dot_1 {
+            0% {
+                top:0;
+                left:0;
+            }
+
+            50% {
+                top:30px;
+                left:20px;
+            }
+
+            100% {
+                top:0;
+                left:40px;
+            }
+        }
+
+        @keyframes dot_2 {
+            0% {
+                top:0;
+                left:0;
+            }
+
+            50% {
+                top:-30px;
+                left:20px;
+            }
+
+            100% {
+                top:0;
+                left:40px;
+            }
+        }
+
+        @keyframes dot_3 {
+            0% {
+                top:0;
+                left:0;
+            }
+
+            50% {
+                top:-30px;
+                left:-40px;
+            }
+
+            100% {
+                top:0;
+                left:-80px;
+            }
+        }
+    </style>
     <title>Main</title>
 </head>
 <body>
-
+<header class='loader'>
+    <div class='loader-center'>
+        <div class='chars'>
+            <span class='char brace'>{</span>
+            <span class='dots'>
+                <span class='char dot _dot-1'>.</span>
+                <span class='char dot _dot-2'>.</span>
+                <span class='char dot _dot-3'>.</span>
+            </span>
+            <span class='char brace'>}</span>
+        </div>
+    </div>
+</header>
 </body>
 </html>
