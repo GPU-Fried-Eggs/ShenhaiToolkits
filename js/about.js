@@ -1,13 +1,14 @@
+const background = document.getElementById("background");
+const loadImage = (src) => new Promise((resolve, reject) => {
+    let img = new Image();
+    img.onload = () => resolve(img);
+    img.onerror = () => reject(new Error("Failed to load image from: " + src));
+    img.src = src;
+});
+
+let img = loadImage("../img/about/noise.png");
+
 window.onload = function() {
-
-    const background = document.getElementById("background");
-    const loadImage = (src) => new Promise((resolve, reject) => {
-        let img = new Image();
-        img.onload = () => resolve(img);
-        img.onerror = () => reject(new Error("Failed to load image from: " + src));
-        img.src = src;
-    });
-
     shade({
         canvas : background,
         shaders: {
@@ -20,7 +21,7 @@ window.onload = function() {
             }
         },
         onInit: (ctx) => {
-            loadImage("../img/about/noise.png").then(image => {
+            img.then(image => {
                 const gl = ctx.gl;
                 const texture = gl.createTexture();
                 gl.bindTexture(gl.TEXTURE_2D, texture);

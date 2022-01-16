@@ -1,5 +1,5 @@
 #background {
-    background-color: pink;
+    background-color: lightblue;
     /*background-image: url(../img/1190230.png);*/
     width: 100vw;
     height: 100vh;
@@ -9,41 +9,85 @@
     z-index: -10;
 }
 
-label {
-    cursor: pointer;
+#container {
+    --ctr-padding: 15vw;
+    margin-left: var(--ctr-padding);
+    padding-top: 10vh;
+    height: 100vh;
+    width: calc(100vw - var(--ctr-padding) * 2);
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, [col-start] 1fr [col-end]);
+    grid-template-rows: 35vh auto;
+    grid-template-areas: "ri le le"
+                         "do do do";
 }
-/* input#file { */
-/* display: none; */
-/* } */
-img#output {
+
+#container > div {
+    background: white;
+    box-shadow: 0 10px 12px #00000033;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-settings {
+    grid-area: ri;
+}
+
+#container > div:first-child div {
+    margin: 0.75rem 0;
+}
+
+.container-import {
+    grid-area: le;
+}
+
+#img-drop {
+    width: 80%;
+    height: 80%;
+    border: 3px dashed pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#img-drop > label {
+    margin: 0 1rem;
+}
+
+#img-drop > input {
     display: none;
 }
 
-canvas {
-    max-width: 45vw;
-    max-height: 45vh;
-    padding: 20px;
-    min-width: 100px;
+#img-preview {
+    width: 90%;
+    height: 85%;
+    display: none;
+    align-items: center;
+    overflow: hidden;
 }
 
-input#pad {
-    width: 40px;
+#img-preview > img {
+    width: 60%;
 }
 
-input#tile {
-    width: 40px;
+#img-preview > div {
+    margin: 0 0 0 5%;
 }
 
-div.controls {
-    padding: 10px;
-    text-align: center;
+#img-preview p {
+    margin: 0.6rem 0;
+    word-break: break-word;
 }
 
-button {
-    margin: 10px;
+.container-output {
+    grid-area: do;
 }
 
-a {
-    margin: 10px;
-    cursor: pointer;
+#output-canvas {
+    width: calc(100% - 50px);
+    margin: 1.2rem 1.4rem;
 }

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="../../css/shared.css">
     <link rel="stylesheet" href="../../css/tools/real-esrgan.css">
     <title>Real-ESRGAN</title>
@@ -26,27 +27,39 @@
     <img id="nav-menu" src="../../img/shared/nav-menu.svg" alt="">
 </nav>
 
-<div>
-
-    <div class='controls'>
-        <input type="file" accept="image/*" name="image" id="file"/>
+<!--由于是1：2：3的形式，用flex调试复杂，考虑grid-->
+<div id="container">
+    <div class="container-settings">
+        <div>
+            <label for='pad'>Pad size:</label>
+            <input type='text' name='pad' id='pad' value='10'/>
+        </div>
+        <div>
+            <label for='tile'>Tile size:</label>
+            <input type='text' name='tile' id='tile' value='10'/>
+        </div>
+        <div>
+            <button id="convert">convert</button>
+        </div>
     </div>
-    <div class='controls'>
-        <label for='pad'>Pad size:</label>
-        <input type='text' name='pad' id='pad' value='10'/>
-        <label for='tile'>Tile size:</label>
-        <input type='text' name='tile' id='tile' value='10'/>
+    <div class="container-import">
+        <div id="img-drop">
+            <label for="input-file">click chose image or drag image here.</label>
+            <input id="input-file" type="file" accept="image/*"/>
+        </div>
+        <div id="img-preview">
+            <img src="" alt="">
+            <div>
+                <p id="input-file-name"></p>
+                <p id="input-file-type"></p>
+                <p id="input-file-update">0</p>
+                <p id="input-file-size"></p>
+                <p id="input-file-wh"></p>
+            </div>
+        </div>
     </div>
-</div>
-
-<div class='controls'>
-    <div>
-        <div id='canvasInfo'></div>
-        <canvas id='canvas'></canvas>
-    </div>
-    <div>
-        <div id='outputCanvasInfo'></div>
-        <canvas id='outputCanvas'></canvas>
+    <div class="container-output">
+        <canvas id="output-canvas"></canvas>
     </div>
 </div>
 

@@ -20,7 +20,7 @@ class Lightbox {
 
         this.popupMask.setAttribute("id", "lightbox-mask");
         this.popupWin.setAttribute("id", "lightbox-popup");
-        this.popupWin.innerHTML = "<div class='lightbox-pic-view'>" + "<img class='lightbox-image' src='img/gallery/1.jpg' alt='Image'>" + "</div>";
+        this.popupWin.innerHTML = "<div class='lightbox-pic-view'>" + "<img class='lightbox-image' src='#' alt='Image'>" + "</div>";
         this.bodyNode.appendChild(this.popupMask);
         this.bodyNode.appendChild(this.popupWin);
 
@@ -31,6 +31,10 @@ class Lightbox {
         this.popupMask.onclick = function() {
             this.style.display = "none";
             self.popupWin.style.display = "none";
+        }
+        this.popupWin.onclick = function() {
+            this.style.display = "none";
+            self.popupMask.style.display = "none";
         }
     }
     showMaskAndPopup(sourceSrc) {
