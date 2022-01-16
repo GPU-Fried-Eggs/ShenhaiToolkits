@@ -16,11 +16,6 @@ let processing = false;
 
 // 走入误区的原因，只思考了拉伸问题没考虑实际状况
 // 走出的想法，考虑浮动通过限制绘制
-async function loadModel() {
-    if(!model)
-        model = await ort.InferenceSession.create("../../js/tools/res/RealESRGAN_x4plus_int8.onnx");
-    return model;
-}
 
 function composeImage(data, width, height) {
     let t = tf.tensor(Array.from(data));
@@ -36,7 +31,6 @@ ort.env.wasm.numThreads = 4; ort.env.wasm.simd = true; ort.env.wasm.proxy = true
 async function predictImage(event, tilePad) {
     const imageData = Float32Array.from(event.data);
     const tensor = new ort.Tensor('float32', imageData, [1, 3, event.height, event.width]);
-    model = await loadModel();
     const results = await model.run({ inputs: tensor });
     const image = {
         data: results.outputs.data,
@@ -65,6 +59,16 @@ convert.onclick = async () => {
     processing = true;
     const tilePad = Number.parseInt(document.getElementById("pad").value);
     const tileSize = Number.parseInt(document.getElementById("tile").value);
+    switch (document.getElementById("model").value) {
+        case "General":
+            model = await ort.InferenceSession.create("../../js/tools/res/RealESRGAN_x4plus_int8.onnx");
+            break;
+        case "Animation":
+            model = await ort.InferenceSession.create("../../js/tools/res/RealESRGAN_x4plus_anime_6B_int8.onnx");
+            break;
+        default:
+            return;
+    }
 
     output.width = imageWidth * 4;
     output.height = imageHeight * 4;

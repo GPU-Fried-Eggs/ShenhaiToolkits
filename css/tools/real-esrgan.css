@@ -37,8 +37,36 @@
     grid-area: ri;
 }
 
-#container > div:first-child div {
-    margin: 0.75rem 0;
+.container-settings > div {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-settings > div:last-child {
+    text-align: center;
+}
+
+.label_cn{
+    float: left;
+    width: 80px;
+}
+
+.input_cn{
+    float: left;
+    margin-left: 10px;
+    width: 80px;
+}
+
+.label_en{
+    float: left;
+    width: 70px;
+}
+
+.input_en{
+    float: left;
+    margin-left: 10px;
+    width: 90px;
 }
 
 .container-import {
