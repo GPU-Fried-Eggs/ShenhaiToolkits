@@ -9,16 +9,15 @@ let language = function getCookie(name) {
     let cookieArr = document.cookie.split(";");
     for (let i = 0; i < cookieArr.length; i++) {
         let cookiePair = cookieArr[i].split("=");
-        if (name === cookiePair[0].trim()) {
+        if (name === cookiePair[0].trim())
             return decodeURIComponent(cookiePair[1]);
-        }
     }
     return null;
 }("lan");
 
-language = !language ? navigator.language.substr(0, 2) : language;
+language = !language ? navigator.language.substring(0, 2) : language;
 
-function switchLanguage() {
+const switchLanguage = () => {
     language = (language === "zh") ? "en" : "zh";
 }
 
@@ -316,5 +315,5 @@ window.onscroll = function () {
 }
 
 window.onbeforeunload = function () {
-    document.cookie = "lan" + "=" + encodeURIComponent(language);
+    document.cookie = "lan" + "=" + encodeURIComponent(language) + "; path=/ShenhaiToolkits/page";
 }

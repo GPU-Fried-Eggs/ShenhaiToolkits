@@ -125,6 +125,10 @@ header .window-cover {
     text-overflow: ellipsis;
 }
 
+.ascii-paint {
+    line-height: 0.95rem;
+}
+
 .item-head {
     margin-top: 10%;
     margin-bottom: 5%;

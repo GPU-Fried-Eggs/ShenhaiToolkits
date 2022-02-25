@@ -10,10 +10,12 @@ header.addEventListener('mouseenter', (event) => {
     startingPoint = event.clientX;
     header.classList.add('moving');
 });
+
 header.addEventListener('mouseout', () => {
     header.classList.remove('moving');
     header.style.setProperty('--percentage', 0.5);
 });
+
 header.addEventListener('mousemove', (event) => {
     let percentage = (event.clientX - startingPoint) / window.outerWidth + 0.5;
     header.style.setProperty('--percentage', percentage);

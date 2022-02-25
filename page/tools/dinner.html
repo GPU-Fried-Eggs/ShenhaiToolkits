@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="../../css/shared.css">
-    <link rel="stylesheet" href="../../css/tools/real-esrgan.css">
-    <title>Real-ESRGAN</title>
+    <link rel="stylesheet" href="../../css/tools/dinner.css">
+    <title>Dinner</title>
 </head>
 <body>
 
@@ -27,57 +27,41 @@
     <img id="nav-menu" src="../../img/shared/nav-menu.svg" alt="">
 </nav>
 
-<!--由于是1：2：3的形式，用flex调试复杂，考虑grid-->
-<div id="container">
-    <div class="container-settings">
-        <div>
-            <label inf-class="layoutData.label" inf-text="languageData.settings.model" for="model">Model: </label>
-            <select inf-class="layoutData.input" id="model">
-                <option inf-text="languageData.settings.modelGen" value="General"></option>
-                <option inf-text="languageData.settings.modelAni" value="Animation"></option>
-            </select>
-        </div>
-        <div>
-            <label inf-class="layoutData.label" inf-text="languageData.settings.pad" for='pad'></label>
-            <input inf-class="layoutData.input" type="text" id="pad" value="10"/>
-        </div>
-        <div>
-            <label inf-class="layoutData.label" inf-text="languageData.settings.tile" for='tile'></label>
-            <input inf-class="layoutData.input" type="text" id="tile" value="30"/>
-        </div>
-        <div>
-            <input id="convert" type="submit" value="convert">
-        </div>
-    </div>
-    <div class="container-import">
-        <div id="img-drop">
-            <label for="input-file">click chose image or drag image here.</label>
-            <input id="input-file" type="file" accept="image/*"/>
-        </div>
-        <div id="img-preview">
-            <img src="" alt="">
-            <div>
-                <p id="input-file-name"></p>
-                <p id="input-file-type"></p>
-                <p id="input-file-update">0</p>
-                <p id="input-file-size"></p>
-                <p id="input-file-wh"></p>
-            </div>
-        </div>
-    </div>
-    <div class="container-output">
-        <canvas id="output-canvas"></canvas>
+<!--Main Page View-->
+<div id="item-container">
+    <div class="item-list"></div>
+</div>
+
+<div id="cart">
+    <img src="../../img/tools/shopping-cart.png" alt="">
+    <img src="">
+</div>
+
+<!--Detail Page View-->
+<div id="detail-container">
+
+</div>
+
+<!--Cart Page View-->
+<div id="cart-container">
+    <header>
+        <p>Shopping Cart</p>
+        <img src="../../img/shared/pav-close.svg" alt="">
+    </header>
+    <ul id="cart-list"></ul>
+    <div class="cart-info">
+        <p>€ 000000000000000000000000000000000000</p>
+        <button>Checkout</button>
     </div>
 </div>
 
+
 </body>
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
 <script src="../../js/shared.js"></script>
-<script src="../../js/tools/real-esrgan.js"></script>
+<script src="../../js/tools/dinner.js"></script>
 <script>
     let languageRenderCtx = new LanguageRender({
-        el: [".nav-ul li", ".container-settings div"],
+        el: [".nav-ul li"],
         lan: language === "zh" ? 1 : 0,
         data: {
             languageData: {
@@ -92,16 +76,9 @@
                     about: ["About", "关于"]
                 },
                 settings: {
-                    model: ["Model:", "模型:"],
-                    modelGen: ["General", "通用"],
-                    modelAni: ["Animation", "动漫"],
-                    pad: ["Pad size:", "分析尺寸:"],
-                    tile: ["Tile size:", "细分尺寸:"]
                 }
             },
             layoutData: {
-                label:['label_en','label_cn'],
-                input:['input_en','input_cn']
             }
         }
     });
