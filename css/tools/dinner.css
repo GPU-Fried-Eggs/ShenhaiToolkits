@@ -97,7 +97,7 @@
 
 /* Detail Page */
 #detail-container {
-    width: 90vw;
+    width: clamp(300px, 90vw, 800px);
     height: 85vh;
     margin: auto;
     top: 0;
@@ -132,8 +132,8 @@
 }
 
 #detail-info > img {
-    width: 45%;
-    margin: 30px 0;
+    width: 40%;
+    margin: 15px 0;
 }
 
 #detail-info > div {
