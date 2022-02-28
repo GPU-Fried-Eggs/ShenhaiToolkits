@@ -87,9 +87,75 @@
     cursor: pointer;
 }
 
+#cart > p {
+    position: fixed;
+    font-size: large;
+    font-weight: bold;
+    bottom: 15px;
+    right: 15px;
+}
+
 /* Detail Page */
 #detail-container {
+    width: 85vh;
+    height: 85vh;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    z-index: 98;
+}
 
+#detail-container > header {
+    margin: 1rem;
+    height: 25px;
+    display: block;
+}
+
+#detail-container > header > img {
+    width: 25px;
+    display: inline-block;
+    float: right;
+}
+
+#detail-container > section {
+    margin: 1rem;
+    height: calc(85vh - 25px - 3rem);
+}
+
+#detail-info {
+    display: flex;
+}
+
+#detail-info > img {
+    width: 45%;
+    margin: 30px 0;
+}
+
+#detail-info > div {
+    text-align: center;
+}
+
+#detail-info > div > h3 {
+    margin: 1rem;
+}
+
+#detail-info > div > a {
+    margin: 2rem;
+}
+
+#detail-info > div > button {
+    width: 120px;
+    height: 25px;
+    display: inline-block;
+    border-radius: 5px;
+    border-width: 0;
+    background-color: dodgerblue;
+    color: white;
 }
 
 /* Cart Page */
