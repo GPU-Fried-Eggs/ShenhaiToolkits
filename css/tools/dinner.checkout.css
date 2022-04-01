@@ -1,0 +1,123 @@
+#background {
+    background-color: lightblue;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: bottom;
+    position: fixed;
+    z-index: -10;
+}
+
+#cart-container {
+    width: 88vw;
+    height: 88vh;
+    bottom: calc((12vh / 2) - 3vh);
+    right: calc(12vw / 2);
+    display: grid;
+    grid-template-areas: "up"
+                         "mid" /* consider left right ?*/
+                         "low";
+    grid-template-rows: 58px 1fr 60px;
+    grid-template-columns: 88vw;
+    position: fixed;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    z-index: 99;
+}
+
+#cart-container > header {
+    margin: 1rem;
+    grid-area: up;
+}
+
+#cart-container > header > p {
+    width: calc(100% - 25px);
+    font-size: larger;
+    font-weight: bold;
+    display: inline-block;
+}
+
+#cart-container > header > img {
+    width: 25px;
+    display: inline-block;
+    float: right;
+}
+
+#cart-list {
+    overflow-y: scroll;
+    grid-area: mid;
+}
+
+.cart-item {
+    width: 100%;
+    display: flex;
+}
+
+.cart-item > img {
+    width: clamp(90px, 30%, 120px);
+    max-width: 120px;
+    vertical-align: middle;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.cart-item > div {
+    width: 70%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.cart-item-remove {
+    margin: 5px;
+}
+
+.cart-item-remove > img {
+    width: 12px;
+}
+
+.cart-item-remove > p:last-child {
+    display: inline-block;
+}
+
+.cart-item-name {
+    font-size: large;
+    margin: 2px 0 4px;
+}
+
+.cart-item-price {
+    margin-left: 0.5rem;
+    display: inline-block;
+}
+
+.cart-item-number {
+    width: clamp(75px, 30%, 100px);
+    margin-top: 0.3rem;
+    margin-left: 0.5rem;
+}
+
+.cart-info {
+    margin: 1rem;
+    display: block;
+    align-items: center;
+    grid-area: low;
+}
+
+.cart-info > p {
+    width: calc(100% - 150px);
+    font-size: large;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.cart-info > button {
+    width: 120px;
+    height: 100%;
+    display: inline-block;
+    border-radius: 5px;
+    border-width: 0;
+    background-color: dodgerblue;
+    color: white;
+    float: right;
+}

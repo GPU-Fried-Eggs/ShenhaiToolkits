@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../../css/shared.css">
+    <link rel="stylesheet" href="../../css/tools/dinner.checkout.css">
+    <title>CheckOut</title>
+</head>
+<body>
+
+<div id="background"></div>
+
+<div id="nav-background"></div>
+<nav>
+    <img id="nav-logo" src="../../img/shared/nav-logo.svg" alt="SHENHAI">
+    <ul class="nav-ul">
+        <li><img src="../../img/shared/nav-search.svg" alt=""><a href="../search.html" inf-text="languageData.nav.search"></a><div class="nav-underline"></div></li>
+        <li><img src="../../img/shared/nav-home.svg" alt=""><a href="../home.html" inf-text="languageData.nav.home"></a><div class="nav-underline"></div></li>
+        <li><img src="../../img/shared/nav-label.svg" alt=""><a href="#" inf-text="languageData.nav.label"></a><div class="nav-underline"></div></li>
+        <li><img src="../../img/shared/nav-music.svg" alt=""><a href="#" inf-text="languageData.nav.music"></a><div class="nav-underline"></div></li>
+        <li><img src="../../img/shared/nav-tool.svg" alt=""><a href="../tools.html" inf-text="languageData.nav.tool"></a><div class="nav-underline"></div></li>
+        <li><img src="../../img/shared/nav-image.svg" alt=""><a href="../image.html" inf-text="languageData.nav.image"></a><div class="nav-underline"></div></li>
+        <li><img src="../../img/shared/nav-global.svg" alt=""><a href="" inf-text="languageData.nav.language" onclick="switchLanguage()"></a><div class="nav-underline"></div></li>
+        <li><img src="../../img/shared/nav-about.svg" alt=""><a href="../about.html" inf-text="languageData.nav.about"></a><div class="nav-underline"></div></li>
+    </ul>
+    <img id="nav-menu" src="../../img/shared/nav-menu.svg" alt="">
+</nav>
+
+<div id="cart-container">
+    <header>
+        <p>0 item in your Cart</p>
+        <img src="../../img/shared/pav-close.svg" alt="">
+    </header>
+    <ul id="cart-list"></ul>
+    <div class="cart-info">
+        <p>€ 0</p>
+        <button>Pay</button>
+    </div>
+</div>
+
+</body>
+<script src="../../js/shared.js"></script>
+<script src="../../js/tools/dinner.checkout.js"></script>
+<script>
+    let languageRenderCtx = new LanguageRender({
+        el: [".nav-ul li"],
+        lan: language === "zh" ? 1 : 0,
+        data: {
+            languageData: {
+                nav: {
+                    search: ["I/S+", "搜索"],
+                    home: ["Home", "首页"],
+                    music: ["Sng", "音乐"],
+                    label: ["Post", "标签"],
+                    tool: ["Util", "工具"],
+                    image: ["Img", "图片"],
+                    language: ["Lang", "语言"],
+                    about: ["About", "关于"]
+                },
+                settings: {
+                }
+            },
+            layoutData: {
+            }
+        }
+    });
+</script>
+</html>
