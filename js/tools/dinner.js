@@ -124,6 +124,9 @@ class Item {
         numberNode.addEventListener("input", () => {
             refreshTotalPrice();
             this.number = this.numberNode.value;
+            cartJson[this.id].number = this.number;
+            cartJson[this.id].totalPrice = this.totalPrice;
+            refreshTotalPrice();
             refreshCartCount();
             this.totalPriceNode.textContent = "€" + (this.price * this.number).toFixed(2);
         });
