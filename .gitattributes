@@ -204,3 +204,6 @@ Procfile          text
 
 # Ignore files (like .npmignore or .gitignore)
 *.*ignore         text
+
+# Vendored files
+js/tools/* linguist-vendored
